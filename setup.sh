@@ -13,7 +13,7 @@ sudo rm -rf ~/.npm
 rm -rf node_modules
 
 # changing application name
-find -type f \( -iname \*.js -o -iname \*.jade \) -print -exec sed -i "s/meanr/$2/g" {} \;
+find . -type f \( -iname \*.js -o -iname \*.jade \) -print -exec sed -i "" "s/meanr/$2/g" {} \;
 
 # installing new node production modules
 npm install async --save
