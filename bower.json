@@ -1,0 +1,12 @@
+{
+  "name": "meanr",
+  "version": "0.0.0",
+  "homepage": "https://github.com/nss-cohort-2014-06-07/meanr",
+  "authors": [
+    "Chyld Medford <chyld.medford@gmail.com>"
+  ],
+  "description": "The MEAN Template",
+  "license": "MIT",
+  "dependencies": {
+  }
+}
