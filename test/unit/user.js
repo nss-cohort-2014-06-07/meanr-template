@@ -6,7 +6,7 @@ var expect    = require('chai').expect,
     User      = require('../../server/models/user'),
     dbConnect = require('../../server/lib/mongodb'),
     cp        = require('child_process'),
-    db        = 'meanr-test';
+    db        = 'mongodb://localhost/meanr-test';
 
 describe('User', function(){
   before(function(done){
