@@ -15,7 +15,7 @@ module.exports = function(app, express){
   app.use(bodyParser.urlencoded({extended:true}));
   app.use(bodyParser.json());
   app.use(methodOverride());
-  app.use(session({store:new RedisStore(), secret:'my super secret key', resave:true, saveUninitialized:true, cookie:{maxAge:null}}));
+  app.use(session({store:new RedisStore({url:process.env.REDIS_URL}), secret:'my super secret key', resave:true, saveUninitialized:true, cookie:{maxAge:null}}));
 
   app.post('/register', users.register);
   app.post('/login', users.login);
@@ -26,4 +26,3 @@ module.exports = function(app, express){
 
   console.log('Express: Routes Loaded');
 };
-

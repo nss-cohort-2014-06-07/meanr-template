@@ -2,13 +2,11 @@
 
 var MongoClient = require('mongodb').MongoClient;
 
-module.exports = function(name, cb){
-  var url = 'mongodb://localhost/' + name;
+module.exports = function(url, cb){
   MongoClient.connect(url, function(err, db){
     global.mongodb = db;
 
-    console.log('Express: Database', name);
+    console.log('Express: Database', url);
     if(cb){cb();}
   });
 };
-

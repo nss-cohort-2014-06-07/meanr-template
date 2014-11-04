@@ -2,6 +2,9 @@
   "name": "meanr",
   "version": "0.0.0",
   "description": "The MEAN Template",
+    "engines": {
+    "node": "0.10.x"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/nss-cohort-2014-06-07/meanr"
@@ -19,6 +22,8 @@
     "coveralls": "./node_modules/coveralls/bin/coveralls.js"
   },
   "scripts": {
+    "start": "node server/index.js",
+    "postinstall": "grunt deploy",
     "test": "mocha test --recursive -R spec --timeout 5000",
     "syntax": "./node_modules/grunt-cli/bin/grunt build",
     "coveralls": "mocha test --recursive -r blanket -R mocha-lcov-reporter | coveralls"
@@ -27,20 +32,5 @@
     "blanket": {
       "pattern": "/server/"
     }
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "blanket": "^1.1.6",
-    "chai": "^1.9.1",
-    "coveralls": "^2.11.1",
-    "grunt": "^0.4.5",
-    "grunt-cli": "^0.1.13",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-jscs": "^0.7.1",
-    "jshint-stylish": "^1.0.0",
-    "mocha": "^1.21.4",
-    "mocha-lcov-reporter": "0.0.1",
-    "supertest": "^0.13.0"
   }
 }

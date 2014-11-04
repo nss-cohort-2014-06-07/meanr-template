@@ -31,23 +31,24 @@ npm install chalk --save
 npm install request --save
 
 # install new node development modules
-npm install grunt --save-dev
-npm install grunt-contrib-clean --save-dev
-npm install grunt-contrib-copy --save-dev
-npm install grunt-contrib-jade --save-dev
-npm install grunt-contrib-jshint --save-dev
-npm install grunt-contrib-less --save-dev
-npm install grunt-contrib-watch --save-dev
-npm install grunt-jscs --save-dev
-npm install grunt-shell --save-dev
-npm install jshint-stylish --save-dev
-npm install blanket --save-dev
-npm install chai --save-dev
-npm install coveralls --save-dev
-npm install grunt-cli --save-dev
-npm install mocha --save-dev
-npm install mocha-lcov-reporter --save-dev
-npm install supertest --save-dev
+npm install bower --save
+npm install grunt --save
+npm install grunt-contrib-clean --save
+npm install grunt-contrib-copy --save
+npm install grunt-contrib-jade --save
+npm install grunt-contrib-jshint --save
+npm install grunt-contrib-less --save
+npm install grunt-contrib-watch --save
+npm install grunt-jscs --save
+npm install grunt-shell --save
+npm install jshint-stylish --save
+npm install blanket --save
+npm install chai --save
+npm install coveralls --save
+npm install grunt-cli --save
+npm install mocha --save
+npm install mocha-lcov-reporter --save
+npm install supertest --save
 
 # installing new bower production components
 bower install angular --save
