@@ -14,7 +14,7 @@ describe('users', function(){
   });
 
   beforeEach(function(done){
-    cp.execFile(__dirname + '/../scripts/clean-db.sh', [process.env.DB], {cwd:__dirname + '/../scripts'}, function(err, stdout, stderr){
+    cp.execFile(__dirname + '/../scripts/clean-db.sh', ['meanr-test'], {cwd:__dirname + '/../scripts'}, function(err, stdout, stderr){
       request(app)
       .post('/login')
       .send('email=bob@aol.com')
