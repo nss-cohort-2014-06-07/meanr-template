@@ -1,6 +1,6 @@
 'use strict';
 
-process.env.DB   = 'meanr-test';
+process.env.DB   = 'mongodb://localhost/meanr-test';
 
 var expect  = require('chai').expect,
     cp      = require('child_process'),
