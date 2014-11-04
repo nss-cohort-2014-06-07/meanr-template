@@ -16,7 +16,7 @@ describe('User', function(){
   });
 
   beforeEach(function(done){
-    cp.execFile(__dirname + '/../scripts/clean-db.sh', [db], {cwd:__dirname + '/../scripts'}, function(err, stdout, stderr){
+    cp.execFile(__dirname + '/../scripts/clean-db.sh', ['meanr-test'], {cwd:__dirname + '/../scripts'}, function(err, stdout, stderr){
       done();
     });
   });
