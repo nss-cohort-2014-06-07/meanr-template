@@ -2,7 +2,7 @@
   "name": "meanr",
   "version": "0.0.0",
   "description": "The MEAN Template",
-    "engines": {
+  "engines": {
     "node": "0.10.x"
   },
   "repository": {
