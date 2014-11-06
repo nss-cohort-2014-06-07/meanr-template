@@ -1,13 +1,15 @@
 (function(){
   'use strict';
 
-  angular.module('meanr')
+  angular.module('zebra')
   .factory('User', ['$rootScope', '$http', '$localForage', function($rootScope, $http, $localForage){
     var _email;
 
-    $localForage.getItem('email').then(function(email){
-      broadcast(email);
-    });
+    function getEmailFromStorage(){
+      $localForage.getItem('email').then(function(email){
+        broadcast(email);
+      });
+    }
 
     $rootScope.$on('unauthorized', function(){
       setEmail(null);
@@ -43,7 +45,8 @@
       });
     }
 
-    return {getEmail:getEmail, setEmail:setEmail, register:register, login:login, logout:logout};
+    getEmailFromStorage();
+
+    return {getEmail:getEmail, setEmail:setEmail, register:register, login:login, logout:logout, getEmailFromStorage:getEmailFromStorage};
   }]);
 })();
-
