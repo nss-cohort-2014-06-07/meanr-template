@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  angular.module('zebra')
+  angular.module('meanr')
   .directive('nsNav', [function(){
     var o = {};
 
