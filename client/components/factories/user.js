@@ -5,15 +5,15 @@
   .factory('User', ['$rootScope', '$http', '$localForage', function($rootScope, $http, $localForage){
     var _email;
 
+    $rootScope.$on('unauthorized', function(){
+      setEmail(null);
+    });
+
     function getEmailFromStorage(){
       $localForage.getItem('email').then(function(email){
         broadcast(email);
       });
     }
-
-    $rootScope.$on('unauthorized', function(){
-      setEmail(null);
-    });
 
     function broadcast(email){
       _email = email;
