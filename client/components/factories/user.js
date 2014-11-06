@@ -1,7 +1,7 @@
 (function(){
   'use strict';
 
-  angular.module('zebra')
+  angular.module('meanr')
   .factory('User', ['$rootScope', '$http', '$localForage', function($rootScope, $http, $localForage){
     var _email;
 
